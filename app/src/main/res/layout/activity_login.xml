@@ -15,6 +15,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/login_skip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
@@ -64,7 +65,8 @@
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ic_mail_24dp"
                 android:drawablePadding="8dp"
-                android:hint="Введите ваш e-mail" />
+                android:hint="Введите ваш e-mail"
+                android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -80,6 +82,7 @@
                 android:drawableStart="@drawable/ic_key_24dp"
                 android:drawablePadding="8dp"
                 android:hint="Пароль"
+                android:inputType="textPassword"
                 android:maxLines="1" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -90,7 +93,10 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/marginHorizontal"
             android:layout_marginTop="32dp"
-            android:background="@drawable/ic_enter_background" />
+            android:background="@color/orangeColor"
+            android:text="Войти"
+            android:textColor="@color/whiteColor" />
+
 
         <TextView
             android:id="@+id/main_forgot_textview"

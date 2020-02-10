@@ -1,11 +1,11 @@
 package com.example.tsj.ui.splash
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.example.tsj.MainActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.example.tsj.R
+import com.example.tsj.ui.login.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -15,12 +15,12 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-      initSplashScreen()
+        initSplashScreen()
     }
 
     private fun initSplashScreen() {
         Handler().postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }, SPLASH_TIME)
 
