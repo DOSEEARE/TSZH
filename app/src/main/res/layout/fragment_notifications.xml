@@ -58,7 +58,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="21dp"
             app:cardCornerRadius="8dp">
-<!--            -->
 
             <ImageView
                 android:layout_width="40dp"
