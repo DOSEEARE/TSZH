@@ -1,13 +1,13 @@
-package com.example.tsj.ui.contact
+package com.example.tsj.ui.fragments.news
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class ContactViewModel : ViewModel() {
+class NewsViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = ""
+        value = "Новости"
     }
     val text: LiveData<String> = _text
 }
