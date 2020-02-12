@@ -17,28 +17,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/mobile_navigation"/>
 
-    <TextView
-        android:id="@+id/main_static_welcome_textview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/marginHorizontal"
-        android:layout_marginTop="70dp"
-        android:maxLines="1"
-        android:text="Добро пожаловать,"
-        android:textColor="@color/blackTextColor"
-        android:textSize="24sp"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/main_static_welcome_textview_two"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/marginHorizontal"
-        android:text="авторизуйтесь чтобы продолжить"
-        android:textColor="@color/blackTextColor"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/main_static_welcome_textview" />
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="0dp"

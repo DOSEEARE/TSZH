@@ -1,10 +1,10 @@
-package com.example.tsj.ui.file
+package com.example.tsj.ui.news
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class FileViewModel : ViewModel() {
+class NewsViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "Новости"

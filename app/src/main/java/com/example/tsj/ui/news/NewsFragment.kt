@@ -1,4 +1,4 @@
-package com.example.tsj.ui.file
+package com.example.tsj.ui.news
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,38 +13,40 @@ import com.example.tsj.R
 import com.example.tsj.adapters.FileAdapter
 import com.example.tsj.adapters.FileSource
 
-class FileFragment : Fragment() {
+class NewsFragment : Fragment() {
 
-    private lateinit var fileViewModel: FileViewModel
-    private lateinit var fAdapter: FileAdapter
-    private lateinit var recyclerViewF: RecyclerView
+    private lateinit var newsViewModel: NewsViewModel
+    private lateinit var newsAdapter: FileAdapter
+    private lateinit var newsrecyclerView: RecyclerView
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        fileViewModel = ViewModelProviders.of(this).get(FileViewModel::class.java)
+        newsViewModel = ViewModelProviders.of(this).get(NewsViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
 
-        recyclerViewF = root.findViewById(R.id.recyclerViewFile)
+        newsrecyclerView = root.findViewById(R.id.recyclerViewFile)
         getRecyclerView()
         getDataSource()
 
         val textView: TextView = root.findViewById(R.id.text_home)
-        fileViewModel.text.observe(this, Observer {
+        newsViewModel.text.observe(this, Observer {
             textView.text = it
         })
         return root
     }
-    private fun getDataSource(){
+
+    private fun getDataSource() {
         val data = FileSource.crateDtaSet()
-        fAdapter.submitList(data)
+        newsAdapter.submitList(data)
     }
+
     private fun getRecyclerView() {
-        recyclerViewF.apply {
-            fAdapter = FileAdapter()
-            adapter = fAdapter
+        newsrecyclerView.apply {
+            newsAdapter = FileAdapter()
+            adapter = newsAdapter
         }
     }
 }
