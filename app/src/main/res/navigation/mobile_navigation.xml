@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.tsj.ui.home.HomeFragment"
+        android:name="com.example.tsj.ui.file.FileFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.tsj.ui.notifications.NotificationsFragment"
+        android:name="com.example.tsj.ui.contact.ContactFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
 </navigation>
