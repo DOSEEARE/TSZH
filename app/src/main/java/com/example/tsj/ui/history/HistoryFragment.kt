@@ -1,25 +1,18 @@
-package com.example.tsj.ui.fragments.history
+package com.example.tsj.ui.history
 
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.viewpager.widget.ViewPager
 import com.example.tsj.R
 import com.example.tsj.adapters.pager.HistoryViewPager
-import com.example.tsj.ui.fragments.news.NewsFragment
-import com.example.tsj.ui.fragments.user.UserListFragment
-import com.example.tsj.ui.fragments.preservation.PreservationFragment
+import com.example.tsj.ui.user.UserListFragment
+import com.example.tsj.ui.preservation.PreservationFragment
 import com.google.android.material.tabs.TabLayout
-import androidx.activity.OnBackPressedCallback
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
-
-
 
 
 /**

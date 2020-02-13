@@ -1,4 +1,4 @@
-package com.example.tsj.ui.fragments.dashboard
+package com.example.tsj.ui.dashboard
 
 import android.os.Bundle
 import android.view.LayoutInflater

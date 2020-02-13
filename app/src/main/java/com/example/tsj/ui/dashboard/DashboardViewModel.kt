@@ -1,13 +1,13 @@
-package com.example.tsj.ui.fragments.news
+package com.example.tsj.ui.dashboard
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NewsViewModel : ViewModel() {
+class DashboardViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "Новости"
+        value = "This is dashboard Fragment"
     }
     val text: LiveData<String> = _text
 }

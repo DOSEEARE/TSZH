@@ -1,4 +1,4 @@
-package com.example.tsj.ui.fragments.news
+package com.example.tsj.ui.news
 
 import android.os.Bundle
 import android.view.LayoutInflater

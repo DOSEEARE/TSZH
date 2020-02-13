@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:layout_gravity="center"
-            android:textColor="@color/actionbar_text"
+            android:textColor="@color/orangeColor"
             android:text="@string/hello_blank_fragment"
             android:textStyle="bold"/>
     </LinearLayout>

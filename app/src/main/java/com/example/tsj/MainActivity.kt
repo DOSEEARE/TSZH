@@ -1,4 +1,4 @@
-package com.example.tsj.ui.activity
+package com.example.tsj
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView

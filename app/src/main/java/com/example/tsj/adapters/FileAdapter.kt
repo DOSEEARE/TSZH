@@ -1,7 +1,5 @@
 package com.example.tsj.adapters
 
-import android.os.Parcel
-import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -12,13 +10,13 @@ class FileAdapter() : RecyclerView.Adapter<FileViewHolder>() {
 
     private var model: List<FileModel> = ArrayList()
 
-    fun submitList(list: List<FileModel>){
+    fun submitList(list: List<FileModel>) {
         model = list
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FileViewHolder {
         return FileViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.item_file,parent,false)
+            LayoutInflater.from(parent.context).inflate(R.layout.item_file, parent, false)
         )
     }
 
@@ -29,7 +27,6 @@ class FileAdapter() : RecyclerView.Adapter<FileViewHolder>() {
     override fun getItemCount(): Int {
         return model.size;
     }
-
 
 
 }

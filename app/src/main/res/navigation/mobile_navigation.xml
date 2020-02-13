@@ -7,29 +7,44 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.tsj.ui.fragments.news.NewsFragment"
+        android:name="com.example.tsj.ui.news.NewsFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.tsj.ui.fragments.dashboard.DashboardFragment"
+        android:name="com.example.tsj.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.tsj.ui.fragments.contact.ContactFragment"
+        android:name="com.example.tsj.ui.contact.ContactFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
 
     <fragment
         android:id="@+id/navigation_history"
-        android:name="com.example.tsj.ui.fragments.history.HistoryFragment"
+        android:name="com.example.tsj.ui.history.HistoryFragment"
         android:label="fragment_history"
-        tools:layout="@layout/fragment_history" >
+        tools:layout="@layout/fragment_history">
         <action
             android:id="@+id/action_navigation_history_to_navigation_notifications"
             app:destination="@id/navigation_notifications" />
     </fragment>
+    <fragment
+        android:id="@+id/navigation_balance"
+        android:name="com.example.tsj.ui.balance.BalanceFragment"
+        android:label="fragment_balance"
+        tools:layout="@layout/fragment_balance" />
+    <fragment
+        android:id="@+id/navigation_application"
+        android:name="com.example.tsj.ui.application.ApplicationFragment"
+        android:label="fragment_application"
+        tools:layout="@layout/fragment_application" />
+    <fragment
+        android:id="@+id/navigation_balance_detail"
+        android:name="com.example.tsj.ui.balanceDetail.BalanceDetailFragment"
+        android:label="fragment_balance_detail"
+        tools:layout="@layout/fragment_balance_detail" />
 </navigation>
