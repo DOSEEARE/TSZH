@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
-        supportActionBar!!.hide()
+//        supportActionBar?.hide();
 
         val navController = findNavController(R.id.nav_host_fragment)
 

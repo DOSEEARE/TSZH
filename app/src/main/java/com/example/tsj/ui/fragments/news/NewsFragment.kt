@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -12,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.tsj.R
 import com.example.tsj.adapters.FileAdapter
 import com.example.tsj.adapters.FileSource
+
+
 
 class NewsFragment : Fragment() {
 
@@ -45,6 +48,25 @@ class NewsFragment : Fragment() {
         recyclerViewF.apply {
             fAdapter = FileAdapter()
             adapter = fAdapter
+        }
+    }
+
+
+    override fun onStart() {
+        super.onStart()
+        try{
+            (activity as AppCompatActivity).supportActionBar!!.hide()
+        }catch (e:Exception){
+
+        }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        try{
+            (activity as AppCompatActivity).supportActionBar!!.show()
+        }catch (e:Exception){
+
         }
     }
 }

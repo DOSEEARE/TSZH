@@ -22,4 +22,14 @@
         android:name="com.example.tsj.ui.fragments.contact.ContactFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.example.tsj.ui.fragments.history.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_navigation_history_to_navigation_notifications"
+            app:destination="@id/navigation_notifications" />
+    </fragment>
 </navigation>

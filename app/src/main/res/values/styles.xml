@@ -7,6 +7,7 @@
         <item name="colorPrimaryDark">@color/actionbar_text</item>
         <item name="colorAccent">@color/actionbar_text</item>
         <item name="toolbarStyle">@style/CustomToolBarStyle</item>
+        <item name="actionBarTheme">@style/MyApp.ActionBarTheme</item>
 
         <item name="android:statusBarColor" tools:ignore="NewApi">@color/colorPrimaryDark</item>
         <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
@@ -18,6 +19,11 @@
 
     <style name="AppTheme.RoundedCornerMaterialButton" parent="Widget.AppCompat.ImageButton">
         <item name="android:background">@drawable/circle_green_backround</item>
+    </style>
+
+    <style name="MyApp.ActionBarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <!-- THIS is where you can color the arrow! -->
+        <item name="colorControlNormal">@color/actionbar_text</item>
     </style>
 
 

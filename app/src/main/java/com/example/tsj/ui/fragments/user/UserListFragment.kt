@@ -1,4 +1,4 @@
-package com.example.tsj.ui.fragments.list
+package com.example.tsj.ui.fragments.user
 
 
 import android.os.Bundle
@@ -14,7 +14,7 @@ import com.example.tsj.ui.expandable.ProductAdapter
 import mainactivity.musicplayer.example.com.expendelrecyclerview.Product
 import java.util.ArrayList
 
-class NewListFragment : Fragment() {
+class UserListFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
