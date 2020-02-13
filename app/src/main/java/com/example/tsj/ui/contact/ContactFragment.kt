@@ -8,7 +8,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import com.example.tsj.R
+import kotlinx.android.synthetic.main.fragment_notifications.*
 
 class ContactFragment : Fragment() {
 
@@ -19,12 +21,12 @@ class ContactFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        contact_connect_button.setOnClickListener { findNavController().navigate(R.id.navigation_balance)}
         contactViewModel =
             ViewModelProviders.of(this).get(ContactViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_notifications, container, false)
-//        val textView: TextView = root.findViewById(R.id.text_notifications)
         contactViewModel.text.observe(this, Observer {
-//            textView.text = it
         })
         return root
     }

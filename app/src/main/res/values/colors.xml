@@ -5,7 +5,7 @@
     <color name="colorAccent">#D81B60</color>
     <color name="orangeColor">#FF9116</color>
     <color name="itemIconTintF">#ACACAC</color>
-    <color name="whiteColor">#ACACAC</color>
+    <color name="whiteColor">#FFF</color>
     <color name="blackTextColor">#000</color>
 
 </resources>
