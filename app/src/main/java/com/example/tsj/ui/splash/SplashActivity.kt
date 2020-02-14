@@ -6,7 +6,7 @@ import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tsj.R
 import com.example.tsj.ui.login.LoginActivity
-
+//dastan
 class SplashActivity : AppCompatActivity() {
 
 
