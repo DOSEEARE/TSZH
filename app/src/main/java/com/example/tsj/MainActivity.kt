@@ -1,7 +1,6 @@
 package com.example.tsj
 
 import android.os.Bundle
-import android.widget.Toolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -16,12 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
-
-//        setSupportActionBar(findViewById(R.id.toolbars))
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        supportActionBar?.hide();
-
+        
         val navController = findNavController(R.id.nav_host_fragment)
 
         val appBarConfiguration = AppBarConfiguration(
