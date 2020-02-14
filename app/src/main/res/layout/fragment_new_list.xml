@@ -4,14 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.user.UserListFragment"
+    tools:context=".ui.fragments.user.UserListFragment"
     android:orientation="vertical">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <Spinner
+        android:id="@+id/material_spinner"
         android:layout_width="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:layout_height="wrap_content" />
+        android:layout_height="65dp"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

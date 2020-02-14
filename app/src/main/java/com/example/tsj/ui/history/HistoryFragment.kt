@@ -9,10 +9,10 @@ import android.view.ViewGroup
 import androidx.viewpager.widget.ViewPager
 import com.example.tsj.R
 import com.example.tsj.adapters.pager.HistoryViewPager
-import com.example.tsj.ui.user.UserListFragment
 import com.example.tsj.ui.preservation.PreservationFragment
 import com.google.android.material.tabs.TabLayout
 import androidx.navigation.Navigation
+import com.example.tsj.ui.fragments.user.UserListFragment
 
 
 /**
