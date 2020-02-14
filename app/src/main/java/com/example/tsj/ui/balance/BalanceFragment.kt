@@ -19,7 +19,7 @@ class BalanceFragment : Fragment() {
 
         // Inflate the layout for this fragment
         balance_show_button.setOnClickListener {
-            findNavController().navigate(R.id.navigation_balance_detail)
+//            findNavController().navigate(R.id.navigation_balance_detail)
         }
 
         return inflater.inflate(R.layout.fragment_balance, container, false)

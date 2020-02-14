@@ -18,7 +18,6 @@ import com.example.tsj.adapters.FileSource
 
 class NewsFragment : Fragment() {
 
-    private lateinit var newsViewModel: NewsViewModel
     private lateinit var fAdapter: FileAdapter
     private lateinit var recyclerViewF: RecyclerView
 
@@ -27,17 +26,12 @@ class NewsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        newsViewModel = ViewModelProviders.of(this).get(NewsViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_news, container, false)
 
         recyclerViewF = root.findViewById(R.id.recyclerViewFile)
         getRecyclerView()
         getDataSource()
 
-        val textView: TextView = root.findViewById(R.id.text_home)
-        newsViewModel.text.observe(this, Observer {
-            textView.text = it
-        })
         return root
     }
     private fun getDataSource(){
@@ -48,24 +42,6 @@ class NewsFragment : Fragment() {
         recyclerViewF.apply {
             fAdapter = FileAdapter()
             adapter = fAdapter
-        }
-    }
-
-    override fun onStart() {
-        super.onStart()
-        try{
-            (activity as AppCompatActivity).supportActionBar!!.hide()
-        }catch (e:Exception){
-
-        }
-    }
-
-    override fun onStop() {
-        super.onStop()
-        try{
-            (activity as AppCompatActivity).supportActionBar!!.show()
-        }catch (e:Exception){
-
         }
     }
 }

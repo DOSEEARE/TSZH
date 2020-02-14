@@ -12,16 +12,13 @@ import com.example.tsj.R
 
 class ContactFragment : Fragment() {
 
-    private lateinit var contactViewModel: ContactViewModel
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        contactViewModel =
-            ViewModelProviders.of(this).get(ContactViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_notifications, container, false)
+        val root = inflater.inflate(R.layout.fragment_contacts, container, false)
+
           val imageH:ImageView = root.findViewById(R.id.imageHistory)
           val imageB:ImageView = root.findViewById(R.id.imageBalance)
           val imageA:ImageView = root.findViewById(R.id.imageApplication)

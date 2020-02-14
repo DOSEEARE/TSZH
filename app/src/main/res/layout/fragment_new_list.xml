@@ -7,10 +7,23 @@
     tools:context=".ui.fragments.user.UserListFragment"
     android:orientation="vertical">
 
-    <Spinner
-        android:id="@+id/material_spinner"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_text_input"
+        android:layout_marginTop="15dp"
         android:layout_width="match_parent"
-        android:layout_height="65dp"/>
+        android:layout_height="wrap_content"
+        app:endIconMode="none"
+        android:hint="HINT TEXT">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableEnd="@drawable/ic_expend"
+            android:paddingEnd="8dp"
+            android:background="@null"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

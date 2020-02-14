@@ -17,21 +17,22 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
-//        setSupportActionBar(findViewById(R.id.toolbars))
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        supportActionBar?.hide();
+        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
 
         val navController = findNavController(R.id.nav_host_fragment)
-
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_home,
                 R.id.navigation_dashboard,
-                R.id.navigation_notifications
+                R.id.navigation_contacts
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
