@@ -6,20 +6,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentActivity
+import androidx.viewpager.widget.ViewPager
 import com.example.tsj.R
 import com.google.android.material.tabs.TabLayout
-import androidx.viewpager2.widget.ViewPager2
-import kotlinx.android.synthetic.main.activity_history.view.*
-import kotlinx.android.synthetic.main.fragment_history.*
-import kotlinx.android.synthetic.main.fragment_history.view.*
+import com.example.tsj.adapters.pager.ViewPagerAdapter
 
 
 /**
  * A simple [Fragment] subclass.
  */
 class HistoryFragment : Fragment() {
-    lateinit var vP: ViewPager2
+    lateinit var vP: ViewPager
     lateinit var tabLayout: TabLayout
 
     override fun onCreateView(
@@ -31,8 +28,27 @@ class HistoryFragment : Fragment() {
         tabLayout = root.findViewById(R.id.tabLs)
         vP = root.findViewById(R.id.viewPi)
 
-        //https://androidwave.com/viewpager2-with-tablayout-android-example/
+        tabLayout.addTab(tabLayout.newTab().setText("Sport"))
+        tabLayout.addTab(tabLayout.newTab().setText("Movie"))
+        tabLayout.tabGravity = TabLayout.GRAVITY_FILL
+        tabLayout.tabMode  = TabLayout.MODE_FIXED
 
+        val adapter = ViewPagerAdapter(this, childFragmentManager, tabLayout.tabCount)
+        vP.adapter = adapter
+
+        vP.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
+
+        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab) {
+                vP.currentItem = tab.position
+            }
+            override fun onTabUnselected(tab: TabLayout.Tab) {
+
+            }
+            override fun onTabReselected(tab: TabLayout.Tab) {
+
+            }
+        })
 
         return root
 
