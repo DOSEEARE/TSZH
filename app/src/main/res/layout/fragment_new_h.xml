@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.Fragments.NewHPFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Address"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#FD9016"
+        android:hint="Адрес">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoAddress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableEnd="@drawable/ic_expend"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="23dp"
+            android:paddingEnd="8dp"
+            android:background="@null"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_surf"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Service"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#FD9016"
+        android:hint="Услуга">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoService"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableEnd="@drawable/ic_expend"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="23dp"
+            android:paddingEnd="8dp"
+            android:background="@null"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_surf"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Operation"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#FD9016"
+        android:hint="Операция">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoOperation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableEnd="@drawable/ic_expend"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="23dp"
+            android:paddingEnd="8dp"
+            android:background="@null"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_surf"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Dates"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#FD9016"
+        android:hint="Даты">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoDates"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableEnd="@drawable/ic_expend"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="23dp"
+            android:paddingEnd="8dp"
+            android:background="@null"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/ic_surf"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="14sp"
+        android:text="Показать"
+        android:textColor="#FFFFFF"
+        style="@style/AppTheme.RoundedCornerMaterialButtonN"/>
+
+</LinearLayout>

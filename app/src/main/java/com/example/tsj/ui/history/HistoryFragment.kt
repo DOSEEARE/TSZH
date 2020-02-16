@@ -28,8 +28,8 @@ class HistoryFragment : Fragment() {
         tabLayout = root.findViewById(R.id.tabLs)
         vP = root.findViewById(R.id.viewPi)
 
-        tabLayout.addTab(tabLayout.newTab().setText("Sport"))
-        tabLayout.addTab(tabLayout.newTab().setText("Movie"))
+        tabLayout.addTab(tabLayout.newTab().setText("Новый ЛС"))
+        tabLayout.addTab(tabLayout.newTab().setText("Сохраненные"))
         tabLayout.tabGravity = TabLayout.GRAVITY_FILL
         tabLayout.tabMode  = TabLayout.MODE_FIXED
 
@@ -43,14 +43,10 @@ class HistoryFragment : Fragment() {
                 vP.currentItem = tab.position
             }
             override fun onTabUnselected(tab: TabLayout.Tab) {
-
             }
             override fun onTabReselected(tab: TabLayout.Tab) {
-
             }
         })
-
         return root
-
     }
 }

@@ -3,26 +3,24 @@ package com.example.tsj.adapters.pager
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.example.tsj.ui.Fragments.BlankFragment
+import com.example.tsj.ui.Fragments.ConservedFragment
+import com.example.tsj.ui.Fragments.NewHPFragment
 import com.example.tsj.ui.history.HistoryFragment
 
 class ViewPagerAdapter(private val myContext: HistoryFragment, fm: FragmentManager, internal var totalTabs: Int) : FragmentPagerAdapter(fm) {
 
-    // this is for fragment tabs
     override fun getItem(position: Int): Fragment {
         when (position) {
             0 -> {
-                //  val homeFragment: HomeFragment = HomeFragment()
-                return BlankFragment()
+                return NewHPFragment()
             }
             1 -> {
-                return BlankFragment()
+                return ConservedFragment()
             }
-            else -> return BlankFragment()
+            else -> return NewHPFragment()
         }
     }
 
-    // this counts total number of tabs
     override fun getCount(): Int {
         return totalTabs
     }
