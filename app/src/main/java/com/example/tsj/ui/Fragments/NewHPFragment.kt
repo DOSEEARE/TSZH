@@ -17,6 +17,8 @@ import kotlinx.android.synthetic.main.fragment_new_list.view.*
 
 class NewHPFragment : Fragment() {
 
+//    Maksim
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

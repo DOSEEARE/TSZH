@@ -9,6 +9,8 @@ import com.example.tsj.ui.history.HistoryFragment
 
 class ViewPagerAdapter(private val myContext: HistoryFragment, fm: FragmentManager, internal var totalTabs: Int) : FragmentPagerAdapter(fm) {
 
+    //    Maksim
+
     override fun getItem(position: Int): Fragment {
         when (position) {
             0 -> {

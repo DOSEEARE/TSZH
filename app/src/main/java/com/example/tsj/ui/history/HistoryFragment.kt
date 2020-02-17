@@ -16,6 +16,9 @@ import com.example.tsj.adapters.pager.ViewPagerAdapter
  * A simple [Fragment] subclass.
  */
 class HistoryFragment : Fragment() {
+
+    //    Maksim
+
     lateinit var vP: ViewPager
     lateinit var tabLayout: TabLayout
 
