@@ -139,6 +139,13 @@ class NewListFragment : Fragment() {
                             autoDatesS.setText(dayOfMonth.toString() + "." + "0" + (monthOfYear + 1) + "." + year1)
                         }
                     }, year, month, day)
+                try {
+                    val timeD = SimpleDateFormat("dd/MM/yyyy").parse(autoDatesDo.text.toString()).getTime()
+                    picker.datePicker.minDate = timeD - 1000
+
+                }catch (e:Exception){
+                    picker.datePicker.minDate = System.currentTimeMillis() + 1000
+                }
                 picker.show()
             }
         }
@@ -161,24 +168,15 @@ class NewListFragment : Fragment() {
                     picker =
                         DatePickerDialog(activity!!, { datePicker, year1, monthOfYear, dayOfMonth ->
                             if (monthOfYear + 1 < 10) {
-                                autoDatesDo.setText(dayOfMonth.toString() + "/" + (monthOfYear + 1) + "/" + year1)
+                                autoDatesDo.setText(dayOfMonth.toString() + "." + "0" + (monthOfYear + 1) + "." + year1)
                             } else {
-                                autoDatesDo.setText(dayOfMonth.toString() + "/" + (monthOfYear + 1) + "/" + year1)
+                                autoDatesDo.setText(dayOfMonth.toString() + "." + "0" + (monthOfYear + 1) + "." + year1)
                             }
+
                         }, year, month, day)
                     try {
                         val timeS = SimpleDateFormat("dd/MM/yyyy").parse(autoDatesS.text.toString()).getTime()
                         picker.datePicker.minDate = timeS + 1000
-
-                        val timeD = SimpleDateFormat("dd/MM/yyyy").parse(autoDatesS.text.toString()).getTime()
-                        picker.datePicker.minDate = timeD + 1000
-
-                        if (timeS == timeD){
-                            booking.setCheckInDateTime(timeS.toString() + booking.getCheckInDateTime().substring(10))
-                            booking.setCheckInDateTime(timeD.toString() + booking.getCheckInDateTime().substring(10))
-
-
-                        }
 
                     }catch (e:Exception){
                         picker.datePicker.minDate = System.currentTimeMillis() - 1000
