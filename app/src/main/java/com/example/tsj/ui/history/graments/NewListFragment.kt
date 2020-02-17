@@ -1,6 +1,8 @@
 package com.example.tsj.ui.history.graments
 
 
+import android.annotation.SuppressLint
+import android.app.DatePickerDialog
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
@@ -10,11 +12,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import com.example.tsj.R
+import com.example.tsj.model.BookingRequest
 import kotlinx.android.synthetic.main.fragment_new_list2.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class NewListFragment : Fragment() {
+
+    lateinit var booking: BookingRequest
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,15 +30,19 @@ class NewListFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_new_list2, container, false)
     }
+
+    @SuppressLint("SetTextI18n")
     override fun onStart() {
         super.onStart()
 
         val address = arrayOf("7 небо, Токомбаева, д.53/2 кв 11")
         val service = arrayOf("Техобслуживание")
         val operation = arrayOf("Платежи")
-        val dates = arrayOf("12/11/2019 - 12/02/2020")
+        val datesS = arrayOf("12/11/2019")
+        val datesDo = arrayOf("12/02/2020")
 
-        val adapterA = ArrayAdapter<String>(context!!, android.R.layout.simple_dropdown_item_1line, address)
+        val adapterA =
+            ArrayAdapter<String>(context!!, android.R.layout.simple_dropdown_item_1line, address)
         autoAddress.setAdapter(adapterA)
         autoAddress.setKeyListener(null);
         autoAddress.onItemClickListener =
@@ -44,16 +56,18 @@ class NewListFragment : Fragment() {
             autoAddress.showDropDown()
         }
         autoAddress.onFocusChangeListener = View.OnFocusChangeListener { view, b ->
-            if (b){
+            if (b) {
                 try {
                     autoAddress.showDropDown()
-                }catch (e: Exception){ }
+                } catch (e: Exception) {
+                }
             }
         }
 
 
-        val adapterS = ArrayAdapter<String>(context!!, android.R.layout.simple_dropdown_item_1line, service)
-        autoService.setAdapter(adapterS)
+        val adapterP =
+            ArrayAdapter<String>(context!!, android.R.layout.simple_dropdown_item_1line, service)
+        autoService.setAdapter(adapterP)
         autoService.setKeyListener(null);
 
         autoService.onItemClickListener =
@@ -68,10 +82,10 @@ class NewListFragment : Fragment() {
             autoService.showDropDown()
         }
         autoService.onFocusChangeListener = View.OnFocusChangeListener { view, b ->
-            if (b){
+            if (b) {
                 try {
                     autoService.showDropDown()
-                }catch (e: Exception){
+                } catch (e: Exception) {
                     println()
                 }
             }
@@ -79,7 +93,8 @@ class NewListFragment : Fragment() {
         }
 
 
-        val adapterO = ArrayAdapter<String>(context!!, android.R.layout.simple_dropdown_item_1line, operation)
+        val adapterO =
+            ArrayAdapter<String>(context!!, android.R.layout.simple_dropdown_item_1line, operation)
         autoOperation.setAdapter(adapterO)
         autoOperation.setKeyListener(null);
 
@@ -95,36 +110,85 @@ class NewListFragment : Fragment() {
             autoOperation.showDropDown()
         }
         autoOperation.onFocusChangeListener = View.OnFocusChangeListener { view, b ->
-            if (b){
+            if (b) {
                 try {
                     autoOperation.showDropDown()
-                }catch (e: Exception){
+                } catch (e: Exception) {
                     println()
                 }
             }
         }
 
 
-        val adapterD = ArrayAdapter<String>(context!!, android.R.layout.simple_dropdown_item_1line, dates)
-        autoDates.setAdapter(adapterD)
-        autoDates.setKeyListener(null);
 
-        autoDates.onItemClickListener =
-            AdapterView.OnItemClickListener { parent, view, position, id ->
-                autoDates.showDropDown()
+        autoDatesS.setKeyListener(null);
+        autoDatesS.setOnFocusChangeListener { view, b ->
+            if (b) {
+                val cldr = Calendar.getInstance()
+                val day = cldr.get(Calendar.DAY_OF_MONTH)
+                val month = cldr.get(Calendar.MONTH)
+                val year = cldr.get(Calendar.YEAR)
+                val picker: DatePickerDialog
                 val col = ColorStateList.valueOf(getResources().getColor(R.color.colorAccent))
-                Dates.defaultHintTextColor = col
-                val selectedItem = parent.getItemAtPosition(position).toString()
+                DatesS.defaultHintTextColor = col
+                picker =
+                    DatePickerDialog(activity!!, { datePicker, year1, monthOfYear, dayOfMonth ->
+                        if (monthOfYear + 1 < 10) {
+                            autoDatesS.setText(dayOfMonth.toString() + "." + "0" + (monthOfYear + 1) + "." + year1)
+                        } else {
+                            autoDatesS.setText(dayOfMonth.toString() + "." + "0" + (monthOfYear + 1) + "." + year1)
+                        }
+                    }, year, month, day)
+                picker.show()
             }
-        autoDates.setOnClickListener {
-            autoDates.showDropDown()
         }
-        autoDates.onFocusChangeListener = View.OnFocusChangeListener { view, b ->
+
+
+        autoDatesDo.setKeyListener(null);
+        autoDatesDo.setOnFocusChangeListener { view, b ->
             if (b){
-                try {
-                    autoDates.showDropDown()
-                }catch (e: Exception){ }
+            if (autoDatesS.text.length == 0) {
+                Toast.makeText(context, "Error", Toast.LENGTH_LONG).show()
+            } else {
+                if (b) {
+                    val cldr = Calendar.getInstance()
+                    val day = cldr.get(Calendar.DAY_OF_MONTH)
+                    val month = cldr.get(Calendar.MONTH)
+                    val year = cldr.get(Calendar.YEAR)
+                    val col = ColorStateList.valueOf(getResources().getColor(R.color.colorAccent))
+                    DatesDo.defaultHintTextColor = col
+                    val picker: DatePickerDialog
+                    picker =
+                        DatePickerDialog(activity!!, { datePicker, year1, monthOfYear, dayOfMonth ->
+                            if (monthOfYear + 1 < 10) {
+                                autoDatesDo.setText(dayOfMonth.toString() + "/" + (monthOfYear + 1) + "/" + year1)
+                            } else {
+                                autoDatesDo.setText(dayOfMonth.toString() + "/" + (monthOfYear + 1) + "/" + year1)
+                            }
+                        }, year, month, day)
+                    try {
+                        val timeS = SimpleDateFormat("dd/MM/yyyy").parse(autoDatesS.text.toString()).getTime()
+                        picker.datePicker.minDate = timeS + 1000
+
+                        val timeD = SimpleDateFormat("dd/MM/yyyy").parse(autoDatesS.text.toString()).getTime()
+                        picker.datePicker.minDate = timeD + 1000
+
+                        if (timeS == timeD){
+                            booking.setCheckInDateTime(timeS.toString() + booking.getCheckInDateTime().substring(10))
+                            booking.setCheckInDateTime(timeD.toString() + booking.getCheckInDateTime().substring(10))
+
+
+                        }
+
+                    }catch (e:Exception){
+                        picker.datePicker.minDate = System.currentTimeMillis() - 1000
+                    }
+
+                    picker.show()
+
+                }
             }
         }
+      }
     }
 }
