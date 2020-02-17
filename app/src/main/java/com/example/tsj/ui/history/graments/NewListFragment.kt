@@ -189,5 +189,4 @@ class NewListFragment : Fragment() {
         }
       }
     }
-    //fefe
 }
