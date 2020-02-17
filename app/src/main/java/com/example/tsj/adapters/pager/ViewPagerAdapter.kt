@@ -3,21 +3,21 @@ package com.example.tsj.adapters.pager
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.example.tsj.ui.Fragments.ConservedFragment
-import com.example.tsj.ui.Fragments.NewHPFragment
 import com.example.tsj.ui.history.HistoryFragment
+import com.example.tsj.ui.history.graments.NewListFragment
+import com.example.tsj.ui.history.graments.SeveFragment
 
 class ViewPagerAdapter(private val myContext: HistoryFragment, fm: FragmentManager, internal var totalTabs: Int) : FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
         when (position) {
             0 -> {
-                return NewHPFragment()
+                return NewListFragment()
             }
             1 -> {
-                return ConservedFragment()
+                return SeveFragment()
             }
-            else -> return NewHPFragment()
+            else -> return NewListFragment()
         }
     }
 
