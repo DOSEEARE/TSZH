@@ -21,11 +21,11 @@ class FileAdapter() : RecyclerView.Adapter<FileViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: FileViewHolder, position: Int) {
-        holder.bind(model.get(position));
+        holder.bind(model.get(position))
     }
 
     override fun getItemCount(): Int {
-        return model.size;
+        return model.size
     }
 
 

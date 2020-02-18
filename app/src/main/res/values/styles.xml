@@ -27,6 +27,10 @@
         <item name="android:background">@drawable/circle_green_backround</item>
     </style>
 
+    <style name="RoundedOrangeBackground" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">@drawable/circle_orange_backround</item>
+    </style>
+
     <style name="MyApp.ActionBarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
         <!-- THIS is where you can color the arrow! -->
         <item name="colorControlNormal">@color/orangeColor</item>

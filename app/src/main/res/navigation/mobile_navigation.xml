@@ -41,4 +41,9 @@
         android:name="com.example.tsj.ui.application.ApplicationFragment"
         android:label="fragment_application"
         tools:layout="@layout/fragment_application" />
+    <fragment
+        android:id="@+id/navigation_balance_detail"
+        android:label="navigation_balance_detail"
+        android:name="com.example.tsj.ui.balanceDetail.BalanceDetailFragment"
+        tools:layout="@layout/fragment_balance_detail" />
 </navigation>

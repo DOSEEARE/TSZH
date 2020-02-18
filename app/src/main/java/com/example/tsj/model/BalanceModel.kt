@@ -1,4 +1,3 @@
 package com.example.tsj.model
 
-class BalanceModel {
-}
+data class BalanceModel (val title: String, val cost: Float)
