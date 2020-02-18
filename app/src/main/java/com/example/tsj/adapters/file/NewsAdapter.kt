@@ -1,14 +1,13 @@
-package com.example.tsj.adapters.file
+package com.example.tsj.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tsj.R
+import com.example.tsj.adapters.file.NewsViewHolder
 import com.example.tsj.model.FileModel
 
 class NewsAdapter() : RecyclerView.Adapter<NewsViewHolder>() {
-
-    //    Maksim
 
     private var model: List<FileModel> = ArrayList()
 
@@ -23,11 +22,11 @@ class NewsAdapter() : RecyclerView.Adapter<NewsViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
-        holder.bind(model.get(position));
+        holder.bind(model.get(position))
     }
 
     override fun getItemCount(): Int {
-        return model.size;
+        return model.size
     }
 
 

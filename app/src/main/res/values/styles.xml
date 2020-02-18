@@ -27,8 +27,8 @@
         <item name="android:background">@drawable/circle_green_backround</item>
     </style>
 
-    <style name="AppTheme.RoundedCornerMaterialButtonN" parent="Widget.AppCompat.ImageButton">
-        <item name="android:background">@drawable/circle_green_backround_n</item>
+    <style name="RoundedOrangeBackground" parent="Widget.AppCompat.ImageButton">
+        <item name="android:background">@drawable/circle_orange_backround</item>
     </style>
 
     <style name="MyApp.ActionBarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">

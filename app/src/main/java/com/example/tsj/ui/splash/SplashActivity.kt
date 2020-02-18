@@ -10,7 +10,7 @@ import com.example.tsj.ui.login.LoginActivity
 class SplashActivity : AppCompatActivity() {
 
 
-    private val SPLASH_TIME: Long = 3000
+    private val SPLASH_TIME: Long = 1500
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)

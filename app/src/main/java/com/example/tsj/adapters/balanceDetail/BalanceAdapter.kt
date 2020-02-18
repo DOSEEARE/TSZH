@@ -1,12 +1,20 @@
 package com.example.tsj.adapters.balanceDetail
 
-import android.view.View
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.example.tsj.R
-import com.example.tsj.common.BaseRecyclerAdapter
+import com.example.tsj.common.GenericRecyclerAdapter
+import com.example.tsj.common.ViewHolder
+import com.example.tsj.model.BalanceModel
+import kotlinx.android.synthetic.main.item_balance.view.*
 
-//class BalanceAdapter(override val layout: Int = R.id.item_balance) : BaseRecyclerAdapter<BalanceVewHolder, BalanceModel>() {
-//    override fun OnCreateViewHolder(view: View): BalanceVewHolder {
-//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-//    }
-//
-//}
+class BalanceAdapter(items: ArrayList<BalanceModel>) : GenericRecyclerAdapter<BalanceModel>(items) {
+    override fun bind(item: BalanceModel, holder: ViewHolder) {
+        holder.itemView.balance_recycler_title.text = item.title
+        holder.itemView.balance_recycler_cost.text = item.cost.toString()
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        return super.onCreateViewHolder(parent, R.layout.item_balance)
+    }
+}

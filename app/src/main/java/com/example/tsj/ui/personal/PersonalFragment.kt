@@ -2,14 +2,12 @@ package com.example.tsj.ui.personal
 
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tsj.R
-import com.example.tsj.adapters.file.NewsAdapter
-import com.example.tsj.adapters.file.NewsSource
 import com.example.tsj.adapters.pesonal.PersonalAdapter
 import com.example.tsj.adapters.pesonal.PersonalSource
 
