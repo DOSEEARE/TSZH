@@ -1,4 +1,4 @@
-package com.example.tsj.adapters.file
+package com.example.tsj.adapters.News
 
 import com.example.tsj.model.FileModel
 

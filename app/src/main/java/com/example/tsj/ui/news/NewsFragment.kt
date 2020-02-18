@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tsj.R
 import com.example.tsj.adapters.NewsAdapter
-import com.example.tsj.adapters.file.NewsSource
+import com.example.tsj.adapters.News.NewsSource
 
 //    Maksim
 

@@ -9,6 +9,7 @@ import com.example.tsj.model.BalanceModel
 import kotlinx.android.synthetic.main.item_balance.view.*
 
 class BalanceAdapter(items: ArrayList<BalanceModel>) : GenericRecyclerAdapter<BalanceModel>(items) {
+
     override fun bind(item: BalanceModel, holder: ViewHolder) {
         holder.itemView.balance_recycler_title.text = item.title
         holder.itemView.balance_recycler_cost.text = item.cost.toString()
