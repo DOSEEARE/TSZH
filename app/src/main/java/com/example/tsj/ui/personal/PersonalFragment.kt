@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tsj.R
 import com.example.tsj.adapters.pesonal.PersonalAdapter
-import com.example.tsj.adapters.pesonal.PersonalSource
+import com.example.tsj.model.PersonalModel
 
 /**
  * A simple [Fragment] subclass.
@@ -28,12 +28,21 @@ class PersonalFragment : Fragment() {
         recyclerView = root.findViewById(R.id.recyclerPersonal)
         getRecyclerView()
         getDataSource()
+        adapters.submitList(getDataSource())
 
         return root
     }
-    private fun getDataSource(){
-        val data = PersonalSource.personalDtaSet()
-        adapters.submitList(data)
+    private fun getDataSource(): ArrayList<PersonalModel>{
+            val list = ArrayList<PersonalModel>()
+            list.add(PersonalModel("641.52","01/12/2019"))
+            list.add(PersonalModel("641.52","01/12/2019"))
+            list.add(PersonalModel("641.52","01/12/2019"))
+            list.add(PersonalModel("620.83","31/12/2019"))
+            list.add(PersonalModel("620.83","31/12/2019"))
+            list.add(PersonalModel("620.83","31/12/2019"))
+            list.add(PersonalModel("620.83","31/12/2019"))
+            list.add(PersonalModel("620.83","31/12/2019"))
+            return list
     }
     private fun getRecyclerView() {
         recyclerView.apply {

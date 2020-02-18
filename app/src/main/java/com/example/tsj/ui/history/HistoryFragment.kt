@@ -6,10 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.example.tsj.R
 import com.google.android.material.tabs.TabLayout
-import com.example.tsj.adapters.pager.ViewPagerAdapter
+import com.example.tsj.adapters.pager.HistoryPagerAdapter
 
 
 /**
@@ -36,7 +37,7 @@ class HistoryFragment : Fragment() {
         tabLayout.tabGravity = TabLayout.GRAVITY_FILL
         tabLayout.tabMode  = TabLayout.MODE_FIXED
 
-        val adapter = ViewPagerAdapter(this, childFragmentManager, tabLayout.tabCount)
+        val adapter = HistoryPagerAdapter(this, childFragmentManager, tabLayout.tabCount)
         vP.adapter = adapter
 
         vP.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(tabLayout))
@@ -50,6 +51,8 @@ class HistoryFragment : Fragment() {
             override fun onTabReselected(tab: TabLayout.Tab) {
             }
         })
+
+        (activity as AppCompatActivity).supportActionBar?.show()
         return root
     }
 }

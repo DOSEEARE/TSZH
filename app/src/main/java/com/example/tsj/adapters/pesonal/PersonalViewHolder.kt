@@ -11,12 +11,10 @@ class PersonalViewHolder (itemView: View): RecyclerView.ViewHolder(itemView){
 
     var title = itemView.findViewById<TextView>(R.id.scrip)
     var adres = itemView.findViewById<TextView>(R.id.number)
-    var icon = itemView.findViewById<ImageView>(R.id.icon)
 
     fun bind(get: PersonalModel) {
         title.setText(get.title)
         adres.setText(get.adres)
-        icon.setImageResource(get.image)
     }
 
 }

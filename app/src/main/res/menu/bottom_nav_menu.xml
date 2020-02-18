@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_news"
         android:icon="@drawable/ic_file_textnew"
         tools:ignore="MenuTitle" />
 

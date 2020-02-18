@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_news">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_news"
         android:name="com.example.tsj.ui.news.NewsFragment"
-        android:label="@string/title_home"
+        android:label="@string/title_news"
         tools:layout="@layout/fragment_news" />
 
     <fragment
@@ -26,9 +26,8 @@
     <fragment
         android:id="@+id/navigation_history"
         android:name="com.example.tsj.ui.history.HistoryFragment"
-        android:label="fragment_history"
-        tools:layout="@layout/fragment_history">
-    </fragment>
+        android:label="@string/history"
+        tools:layout="@layout/fragment_history"/>
 
     <fragment
         android:id="@+id/navigation_balance"
@@ -41,11 +40,13 @@
         android:name="com.example.tsj.ui.application.ApplicationFragment"
         android:label="fragment_application"
         tools:layout="@layout/fragment_application" />
+
     <fragment
-        android:id="@+id/personalFragment"
+        android:id="@+id/navigation_Personal"
         android:name="com.example.tsj.ui.personal.PersonalFragment"
-        android:label="fragment_personal"
+        android:label="@string/history"
         tools:layout="@layout/fragment_personal" />
+
     <fragment
         android:id="@+id/navigation_balance_detail"
         android:name="com.example.tsj.ui.balanceDetail.BalanceDetailFragment"

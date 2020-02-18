@@ -1,6 +1,6 @@
 package com.example.tsj.model
 
-class FileModel (
+class NewsModel (
     var title: String,
     var address: String
 )

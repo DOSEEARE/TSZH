@@ -4,22 +4,22 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.example.tsj.ui.history.HistoryFragment
-import com.example.tsj.ui.history.graments.NewListFragment
+import com.example.tsj.ui.history.graments.HistoryListFragment
 import com.example.tsj.ui.history.graments.SeveFragment
 
-class ViewPagerAdapter(private val myContext: HistoryFragment, fm: FragmentManager, internal var totalTabs: Int) : FragmentPagerAdapter(fm) {
+class HistoryPagerAdapter(private val myContext: HistoryFragment, fm: FragmentManager, internal var totalTabs: Int) : FragmentPagerAdapter(fm) {
 
     //    Maksim
 
     override fun getItem(position: Int): Fragment {
         when (position) {
             0 -> {
-                return NewListFragment()
+                return HistoryListFragment()
             }
             1 -> {
                 return SeveFragment()
             }
-            else -> return NewListFragment()
+            else -> return HistoryListFragment()
         }
     }
 

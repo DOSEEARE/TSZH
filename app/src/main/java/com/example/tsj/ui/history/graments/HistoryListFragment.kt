@@ -4,7 +4,6 @@ package com.example.tsj.ui.history.graments
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.res.ColorStateList
-import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,6 +13,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.Navigation
 import com.example.tsj.R
 import com.example.tsj.model.BookingRequest
@@ -21,8 +21,7 @@ import kotlinx.android.synthetic.main.fragment_new_llistener.*
 import java.text.SimpleDateFormat
 import java.util.*
 
-
-class NewListFragment : Fragment() {
+class HistoryListFragment : Fragment() {
 
     private lateinit var booking: BookingRequest
     private lateinit var to_showB: Button
@@ -36,7 +35,7 @@ class NewListFragment : Fragment() {
         to_showB = root.findViewById(R.id.show)
 
         to_showB.setOnClickListener { v->
-            Navigation.findNavController(root).navigate(R.id.personalFragment)
+            Navigation.findNavController(root).navigate(R.id.navigation_Personal)
         }
 
         return root

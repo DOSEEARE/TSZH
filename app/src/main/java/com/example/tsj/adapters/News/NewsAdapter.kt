@@ -5,13 +5,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tsj.R
 import com.example.tsj.adapters.News.NewsViewHolder
-import com.example.tsj.model.FileModel
+import com.example.tsj.model.NewsModel
 
 class NewsAdapter() : RecyclerView.Adapter<NewsViewHolder>() {
 
-    private var model: List<FileModel> = ArrayList()
+    private var model: List<NewsModel> = ArrayList()
 
-    fun submitList(list: List<FileModel>) {
+    fun submitList(list: List<NewsModel>) {
         model = list
     }
 

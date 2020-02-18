@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 
 import com.example.tsj.R
 
@@ -19,7 +20,10 @@ class SeveFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_seve, container, false)
+        var root = inflater.inflate(R.layout.fragment_seve, container, false)
+
+        (activity as AppCompatActivity).supportActionBar?.show()
+        return root
     }
 
 
