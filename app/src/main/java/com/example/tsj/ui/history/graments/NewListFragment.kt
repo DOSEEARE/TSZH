@@ -12,23 +12,34 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.Toast
+import androidx.navigation.Navigation
 import com.example.tsj.R
 import com.example.tsj.model.BookingRequest
-import kotlinx.android.synthetic.main.fragment_new_list2.*
+import kotlinx.android.synthetic.main.fragment_new_llistener.*
 import java.text.SimpleDateFormat
 import java.util.*
 
 
 class NewListFragment : Fragment() {
 
-    lateinit var booking: BookingRequest
+    private lateinit var booking: BookingRequest
+    private lateinit var to_showB: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_new_list2, container, false)
+        var root = inflater.inflate(R.layout.fragment_new_llistener, container, false)
+
+        to_showB = root.findViewById(R.id.show)
+
+        to_showB.setOnClickListener { v->
+            Navigation.findNavController(root).navigate(R.id.personalFragment)
+        }
+
+        return root
     }
 
     @SuppressLint("SetTextI18n")
@@ -38,8 +49,6 @@ class NewListFragment : Fragment() {
         val address = arrayOf("7 небо, Токомбаева, д.53/2 кв 11")
         val service = arrayOf("Техобслуживание")
         val operation = arrayOf("Платежи")
-        val datesS = arrayOf("12/11/2019")
-        val datesDo = arrayOf("12/02/2020")
 
         val adapterA =
             ArrayAdapter<String>(context!!, android.R.layout.simple_dropdown_item_1line, address)
@@ -89,7 +98,6 @@ class NewListFragment : Fragment() {
                     println()
                 }
             }
-
         }
 
 
@@ -139,13 +147,6 @@ class NewListFragment : Fragment() {
                             autoDatesS.setText(dayOfMonth.toString() + "." + "0" + (monthOfYear + 1) + "." + year1)
                         }
                     }, year, month, day)
-                try {
-                    val timeD = SimpleDateFormat("dd/MM/yyyy").parse(autoDatesDo.text.toString()).getTime()
-                    picker.datePicker.minDate = timeD - 1000
-
-                }catch (e:Exception){
-                    picker.datePicker.minDate = System.currentTimeMillis() + 1000
-                }
                 picker.show()
             }
         }
@@ -183,11 +184,9 @@ class NewListFragment : Fragment() {
                     }
 
                     picker.show()
-
                 }
             }
         }
       }
     }
-    //efefe
 }

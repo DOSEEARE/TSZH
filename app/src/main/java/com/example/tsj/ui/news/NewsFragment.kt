@@ -4,15 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tsj.R
-import com.example.tsj.adapters.FileAdapter
-import com.example.tsj.adapters.FileSource
+import com.example.tsj.adapters.file.NewsAdapter
+import com.example.tsj.adapters.file.NewsSource
 
 //    Maksim
 
@@ -20,7 +16,7 @@ import com.example.tsj.adapters.FileSource
 
 class NewsFragment : Fragment() {
 
-    private lateinit var fAdapter: FileAdapter
+    private lateinit var fAdapter: NewsAdapter
     private lateinit var recyclerViewF: RecyclerView
 
     override fun onCreateView(
@@ -37,12 +33,12 @@ class NewsFragment : Fragment() {
         return root
     }
     private fun getDataSource(){
-        val data = FileSource.crateDtaSet()
+        val data = NewsSource.crateDtaSet()
         fAdapter.submitList(data)
     }
     private fun getRecyclerView() {
         recyclerViewF.apply {
-            fAdapter = FileAdapter()
+            fAdapter = NewsAdapter()
             adapter = fAdapter
         }
     }
