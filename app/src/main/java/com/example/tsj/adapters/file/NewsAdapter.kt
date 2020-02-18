@@ -1,4 +1,4 @@
-package com.example.tsj.adapters
+package com.example.tsj.adapters.file
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.tsj.R
 import com.example.tsj.model.FileModel
 
-class FileAdapter() : RecyclerView.Adapter<FileViewHolder>() {
+class NewsAdapter() : RecyclerView.Adapter<NewsViewHolder>() {
 
     //    Maksim
 
@@ -16,13 +16,13 @@ class FileAdapter() : RecyclerView.Adapter<FileViewHolder>() {
         model = list
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FileViewHolder {
-        return FileViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
+        return NewsViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.item_file, parent, false)
         )
     }
 
-    override fun onBindViewHolder(holder: FileViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         holder.bind(model.get(position));
     }
 

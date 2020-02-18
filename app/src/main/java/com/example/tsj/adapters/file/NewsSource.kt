@@ -1,8 +1,8 @@
-package com.example.tsj.adapters
+package com.example.tsj.adapters.file
 
 import com.example.tsj.model.FileModel
 
-class FileSource{
+class NewsSource{
 
     companion object{
         fun crateDtaSet(): ArrayList<FileModel>{

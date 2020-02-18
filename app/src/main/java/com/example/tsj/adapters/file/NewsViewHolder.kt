@@ -1,4 +1,4 @@
-package com.example.tsj.adapters
+package com.example.tsj.adapters.file
 
 import android.view.View
 import android.widget.TextView
@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.tsj.R
 import com.example.tsj.model.FileModel
 
-class FileViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+class NewsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
     var title: TextView = itemView.findViewById(R.id.titleF)
     var address: TextView = itemView.findViewById(R.id.addressF)
