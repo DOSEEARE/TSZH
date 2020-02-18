@@ -15,7 +15,7 @@
             android:id="@+id/beck"
             android:layout_width="16.67dp"
             android:layout_height="16.67dp"
-            android:src="@drawable/beck"
+            android:src="@drawable/ic_back"
             android:layout_gravity="center"
             android:layout_margin="20sp"/>
 

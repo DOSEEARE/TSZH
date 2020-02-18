@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.example.tsj.R
 
@@ -19,12 +18,15 @@ class ContactFragment : Fragment() {
     ): View? {
         val root = inflater.inflate(R.layout.fragment_contacts, container, false)
 
-          val imageH:ImageView = root.findViewById(R.id.imageHistory)
-          val imageB:ImageView = root.findViewById(R.id.imageBalance)
-          val imageA:ImageView = root.findViewById(R.id.imageApplication)
+          val imageHistory:ImageView = root.findViewById(R.id.imageHistory)
+          val imageBalance:ImageView = root.findViewById(R.id.imageBalance)
+          val imageApplication:ImageView = root.findViewById(R.id.imageApplication)
 
-        imageH.setOnClickListener {
+        imageHistory.setOnClickListener {
             findNavController().navigate(R.id.navigation_history)
+        }
+        imageBalance.setOnClickListener {
+            findNavController().navigate(R.id.navigation_balance)
         }
         return root
     }
