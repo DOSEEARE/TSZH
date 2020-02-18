@@ -147,6 +147,6 @@
         android:textSize="14sp"
         android:text="Показать"
         android:textColor="#FFFFFF"
-        style="@style/AppTheme.RoundedCornerMaterialButton"/>
+        style="@style/RoundedOrangeBackground"/>
 
 </LinearLayout>
