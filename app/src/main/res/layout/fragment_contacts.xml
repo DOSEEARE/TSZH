@@ -43,7 +43,7 @@
             android:src="@drawable/ic_balance" />
 
         <ImageView
-            android:id="@+id/imageApplication"
+            android:id="@+id/imageBid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

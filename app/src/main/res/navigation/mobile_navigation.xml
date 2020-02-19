@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.tsj.ui.dashboard.DashboardFragment"
+        android:name="com.example.tsj.ui.message.MessageFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_message" />
 
     <fragment
         android:id="@+id/navigation_contacts"
@@ -36,10 +36,10 @@
         tools:layout="@layout/fragment_balance" />
 
     <fragment
-        android:id="@+id/navigation_application"
-        android:name="com.example.tsj.ui.application.ApplicationFragment"
+        android:id="@+id/navigation_bid"
+        android:name="com.example.tsj.ui.bid.BidFragment"
         android:label="fragment_application"
-        tools:layout="@layout/fragment_application" />
+        tools:layout="@layout/fragment_bid" />
 
     <fragment
         android:id="@+id/navigation_Personal"
@@ -49,7 +49,7 @@
 
     <fragment
         android:id="@+id/navigation_balance_detail"
-        android:name="com.example.tsj.ui.balanceDetail.BalanceDetailFragment"
+        android:name="com.example.tsj.ui.balance.BalanceDetailFragment"
         android:label="fragment_balance_detail"
         tools:layout="@layout/fragment_balance_detail" />
 

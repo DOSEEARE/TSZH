@@ -8,7 +8,7 @@
         tools:ignore="MenuTitle" />
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_message"
         android:icon="@drawable/ic_chat"
         tools:ignore="MenuTitle" />
 

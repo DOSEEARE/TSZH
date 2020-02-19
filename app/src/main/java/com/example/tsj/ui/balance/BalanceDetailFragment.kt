@@ -1,4 +1,4 @@
-package com.example.tsj.ui.balanceDetail
+package com.example.tsj.ui.balance
 
 
 import android.os.Bundle
@@ -19,7 +19,6 @@ class BalanceDetailFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_balance_detail, container, false)
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

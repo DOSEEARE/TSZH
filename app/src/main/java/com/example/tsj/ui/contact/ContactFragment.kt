@@ -5,10 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.tsj.R
+
 class ContactFragment : Fragment() {
 
     override fun onCreateView(
@@ -18,9 +18,9 @@ class ContactFragment : Fragment() {
     ): View? {
         val root = inflater.inflate(R.layout.fragment_contacts, container, false)
 
-          val imageHistory:ImageView = root.findViewById(R.id.imageHistory)
-          val imageBalance:ImageView = root.findViewById(R.id.imageBalance)
-          val imageApplication:ImageView = root.findViewById(R.id.imageApplication)
+        val imageHistory: ImageView = root.findViewById(R.id.imageHistory)
+        val imageBalance: ImageView = root.findViewById(R.id.imageBalance)
+        val imageBid: ImageView = root.findViewById(R.id.imageBid)
 
         imageHistory.setOnClickListener {
             findNavController().navigate(R.id.navigation_history)
@@ -28,9 +28,9 @@ class ContactFragment : Fragment() {
         imageBalance.setOnClickListener {
             findNavController().navigate(R.id.navigation_balance)
         }
-
-        (activity as AppCompatActivity).supportActionBar?.hide()
-
+        imageBid.setOnClickListener {
+            findNavController().navigate(R.id.navigation_bid)
+        }
         return root
     }
 }
