@@ -5,25 +5,26 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tsj.R
 import com.example.tsj.adapters.pesonal.PersonalAdapter
 import com.example.tsj.model.PersonalModel
 
-/**
- * A simple [Fragment] subclass.
- */
 class PersonalFragment : Fragment() {
 
     private lateinit var adapters: PersonalAdapter
     private lateinit var recyclerView: RecyclerView
 
+    var bSave: Button? = null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root =inflater.inflate(R.layout.fragment_personal, container, false)
+        val root = inflater.inflate(R.layout.fragment_personal, container, false)
+        bSave = root.findViewById(R.id.bottomSave)
 
         recyclerView = root.findViewById(R.id.recyclerPersonal)
         getRecyclerView()

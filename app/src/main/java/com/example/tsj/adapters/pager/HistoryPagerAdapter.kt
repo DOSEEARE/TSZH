@@ -5,7 +5,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.example.tsj.ui.history.HistoryFragment
 import com.example.tsj.ui.history.graments.HistoryListFragment
-import com.example.tsj.ui.history.graments.SeveFragment
+import com.example.tsj.ui.history.graments.SaveFragment
 
 class HistoryPagerAdapter(private val myContext: HistoryFragment, fm: FragmentManager, internal var totalTabs: Int) : FragmentPagerAdapter(fm) {
 
@@ -17,7 +17,7 @@ class HistoryPagerAdapter(private val myContext: HistoryFragment, fm: FragmentMa
                 return HistoryListFragment()
             }
             1 -> {
-                return SeveFragment()
+                return SaveFragment()
             }
             else -> return HistoryListFragment()
         }
