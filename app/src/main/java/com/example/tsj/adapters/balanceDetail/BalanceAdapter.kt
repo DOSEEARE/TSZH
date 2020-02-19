@@ -17,4 +17,5 @@ class BalanceAdapter(items: ArrayList<BalanceModel>) : GenericRecyclerAdapter<Ba
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return super.onCreateViewHolder(parent, R.layout.item_balance)
     }
+
 }

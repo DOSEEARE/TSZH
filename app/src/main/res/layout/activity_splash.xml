@@ -7,10 +7,10 @@
     android:orientation="vertical"
     tools:context=".ui.splash.SplashActivity">
 
-
     <ImageView
         android:id="@+id/splash_imageview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="208dp"
+        android:src="@drawable/tsj_logo"
+        android:layout_height="60dp" />
 
 </LinearLayout>

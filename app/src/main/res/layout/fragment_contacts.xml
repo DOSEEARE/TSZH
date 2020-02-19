@@ -20,6 +20,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
+            android:elevation="8dp"
             android:id="@+id/linearLayout"
             style="@style/AppTheme.RoundedCornerMaterialButton"
             android:layout_width="match_parent"
@@ -46,7 +47,7 @@
                 android:src="@drawable/ic_balance" />
 
             <ImageView
-                android:id="@+id/imageApplication"
+                android:id="@+id/imageBid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="41dp"
@@ -59,13 +60,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
-            android:layout_marginTop="302dp"
+            android:layout_marginTop="24dp"
             android:text="Разное"
             android:textColor="#3E3E3E"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/linearLayout" />
 
         <LinearLayout
             android:id="@+id/hom"

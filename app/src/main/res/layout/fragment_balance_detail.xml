@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginStart="@dimen/marginHorizontal"
     android:layout_marginEnd="@dimen/marginHorizontal"
-    tools:context=".ui.balanceDetail.BalanceDetailFragment">
+    tools:context=".ui.balance.BalanceDetailFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

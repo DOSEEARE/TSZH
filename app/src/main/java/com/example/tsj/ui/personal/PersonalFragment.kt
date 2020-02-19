@@ -11,9 +11,7 @@ import com.example.tsj.R
 import com.example.tsj.adapters.pesonal.PersonalAdapter
 import com.example.tsj.adapters.pesonal.PersonalSource
 
-/**
- * A simple [Fragment] subclass.
- */
+
 class PersonalFragment : Fragment() {
 
     private lateinit var adapters: PersonalAdapter

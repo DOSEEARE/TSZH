@@ -18,15 +18,18 @@ class ContactFragment : Fragment() {
     ): View? {
         val root = inflater.inflate(R.layout.fragment_contacts, container, false)
 
-          val imageHistory:ImageView = root.findViewById(R.id.imageHistory)
-          val imageBalance:ImageView = root.findViewById(R.id.imageBalance)
-          val imageApplication:ImageView = root.findViewById(R.id.imageApplication)
+        val imageHistory: ImageView = root.findViewById(R.id.imageHistory)
+        val imageBalance: ImageView = root.findViewById(R.id.imageBalance)
+        val imageBid: ImageView = root.findViewById(R.id.imageBid)
 
         imageHistory.setOnClickListener {
             findNavController().navigate(R.id.navigation_history)
         }
         imageBalance.setOnClickListener {
             findNavController().navigate(R.id.navigation_balance)
+        }
+        imageBid.setOnClickListener {
+            findNavController().navigate(R.id.navigation_bid)
         }
         return root
     }

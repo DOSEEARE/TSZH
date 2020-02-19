@@ -22,12 +22,10 @@ class NewsAdapter() : RecyclerView.Adapter<NewsViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
-        holder.bind(model.get(position))
+        holder.bind(model[position])
     }
 
     override fun getItemCount(): Int {
         return model.size
     }
-
-
 }

@@ -12,10 +12,10 @@
         tools:layout="@layout/fragment_news" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.tsj.ui.dashboard.DashboardFragment"
+        android:id="@+id/navigation_message"
+        android:name="com.example.tsj.ui.message.MessageFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_message" />
 
     <fragment
         android:id="@+id/navigation_contacts"
@@ -37,10 +37,10 @@
         tools:layout="@layout/fragment_balance" />
 
     <fragment
-        android:id="@+id/navigation_application"
-        android:name="com.example.tsj.ui.application.ApplicationFragment"
-        android:label="fragment_application"
-        tools:layout="@layout/fragment_application" />
+        android:id="@+id/navigation_bid"
+        android:name="com.example.tsj.ui.bid.BidFragment"
+        android:label="fragment_bid"
+        tools:layout="@layout/fragment_bid" />
     <fragment
         android:id="@+id/personalFragment"
         android:name="com.example.tsj.ui.personal.PersonalFragment"
@@ -48,7 +48,7 @@
         tools:layout="@layout/fragment_personal" />
     <fragment
         android:id="@+id/navigation_balance_detail"
-        android:name="com.example.tsj.ui.balanceDetail.BalanceDetailFragment"
+        android:name="com.example.tsj.ui.balance.BalanceDetailFragment"
         android:label="fragment_balance_detail"
         tools:layout="@layout/fragment_balance_detail" />
 </navigation>
