@@ -41,7 +41,6 @@ class HistoryListFragment : Fragment() {
         return root
     }
 
-    @SuppressLint("SetTextI18n")
     override fun onStart() {
         super.onStart()
 

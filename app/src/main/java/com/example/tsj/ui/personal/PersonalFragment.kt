@@ -11,6 +11,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.tsj.R
 import com.example.tsj.adapters.pesonal.PersonalAdapter
 import com.example.tsj.model.PersonalModel
+import kotlinx.android.synthetic.main.fragment_personal.*
+import kotlinx.android.synthetic.main.fragment_personal.view.*
+import java.lang.Exception
 
 class PersonalFragment : Fragment() {
 
@@ -26,6 +29,7 @@ class PersonalFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_personal, container, false)
         bSave = root.findViewById(R.id.bottomSave)
 
+
         recyclerView = root.findViewById(R.id.recyclerPersonal)
         getRecyclerView()
         getDataSource()
@@ -33,6 +37,19 @@ class PersonalFragment : Fragment() {
 
         return root
     }
+
+    override fun onStart() {
+        super.onStart()
+        try {
+            if (arguments!!.getBoolean("btn")){
+                bottomSave.visibility = View.GONE
+            }
+
+        }catch (e:Exception){
+
+        }
+    }
+
     private fun getDataSource(): ArrayList<PersonalModel>{
             val list = ArrayList<PersonalModel>()
             list.add(PersonalModel("641.52","01/12/2019"))
