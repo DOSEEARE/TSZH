@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.tsj.R
-import com.example.tsj.adapters.balanceDetail.BalanceAdapter
+import com.example.tsj.adapters.balance.BalanceAdapter
 import com.example.tsj.model.BalanceModel
 import kotlinx.android.synthetic.main.fragment_balance_detail.*
 

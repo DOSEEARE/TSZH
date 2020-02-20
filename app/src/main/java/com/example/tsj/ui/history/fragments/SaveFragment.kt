@@ -1,4 +1,4 @@
-package com.example.tsj.ui.history.graments
+package com.example.tsj.ui.history.fragments
 
 
 import android.os.Bundle
@@ -8,12 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 
 import com.example.tsj.R
 import com.example.tsj.adapters.save.SaveRecyclerAdapter
-import com.example.tsj.model.SaveListener
+import com.example.tsj.adapters.save.SaveListener
 import com.example.tsj.model.SaveModel
 import java.util.*
 import kotlin.collections.ArrayList
@@ -28,9 +27,9 @@ class SaveFragment : Fragment(), SaveListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var root = inflater.inflate(R.layout.fragment_seve, container, false)
+        var root = inflater.inflate(R.layout.fragment_save, container, false)
 
-        recycler = root.findViewById(R.id.saveRecyclerView)
+        recycler = root.findViewById(R.id.save_recyclerView)
         adapters = SaveRecyclerAdapter(getList(), this)
         recycler.adapter = adapters
 

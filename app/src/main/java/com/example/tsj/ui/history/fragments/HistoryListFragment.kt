@@ -1,7 +1,6 @@
-package com.example.tsj.ui.history.graments
+package com.example.tsj.ui.history.fragments
 
 
-import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.res.ColorStateList
 import android.os.Bundle
@@ -13,7 +12,6 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.Navigation
 import com.example.tsj.R
 import com.example.tsj.model.BookingRequest
@@ -35,7 +33,7 @@ class HistoryListFragment : Fragment() {
         to_showB = root.findViewById(R.id.show)
 
         to_showB.setOnClickListener { v->
-            Navigation.findNavController(root).navigate(R.id.navigation_Personal)
+            Navigation.findNavController(root).navigate(R.id.navigation_personal)
         }
 
         return root

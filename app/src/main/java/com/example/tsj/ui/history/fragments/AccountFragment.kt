@@ -1,15 +1,12 @@
-package com.example.tsj.ui.history.graments
+package com.example.tsj.ui.history.fragments
 
 
 import android.app.AlertDialog
-import android.app.Dialog
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.Button
 import android.widget.TextView
-import androidx.core.view.isVisible
 import androidx.navigation.Navigation
 import com.example.tsj.R
 
@@ -39,7 +36,7 @@ class AccountFragment : Fragment() {
         bReturn.setOnClickListener { l ->
             var bundle = Bundle()
             bundle.putBoolean("btn", true)
-            Navigation.findNavController(root).navigate(R.id.navigation_Personal, bundle)
+            Navigation.findNavController(root).navigate(R.id.navigation_personal, bundle)
         }
 
         return root

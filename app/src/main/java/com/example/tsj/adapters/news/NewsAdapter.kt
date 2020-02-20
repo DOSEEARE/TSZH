@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tsj.R
-import com.example.tsj.adapters.News.NewsViewHolder
+import com.example.tsj.adapters.news.NewsViewHolder
 import com.example.tsj.model.NewsModel
 
 class NewsAdapter() : RecyclerView.Adapter<NewsViewHolder>() {

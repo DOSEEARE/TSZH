@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.history.graments.HistoryListFragment">
+    tools:context=".ui.history.fragments.HistoryListFragment">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/Address"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:src="@drawable/ic_surf"/>
+        android:src="@drawable/ic_divider"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/Service"
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:src="@drawable/ic_surf"/>
+        android:src="@drawable/ic_divider"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/Operation"
@@ -82,7 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:src="@drawable/ic_surf"/>
+        android:src="@drawable/ic_divider"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -135,7 +135,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:src="@drawable/ic_surf"/>
+        android:src="@drawable/ic_divider"/>
 
     <Button
         android:id="@+id/show"

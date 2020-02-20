@@ -1,4 +1,4 @@
-package com.example.tsj.adapters.balanceDetail
+package com.example.tsj.adapters.balance
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView

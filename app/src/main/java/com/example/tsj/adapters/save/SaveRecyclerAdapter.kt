@@ -6,11 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.tsj.R
 import com.example.tsj.common.GenericRecyclerAdapter
 import com.example.tsj.common.ViewHolder
-import com.example.tsj.model.SaveListener
 import com.example.tsj.model.SaveModel
 import kotlinx.android.synthetic.main.item_save.view.*
 
-class SaveRecyclerAdapter(item: ArrayList<SaveModel>,listener:SaveListener): GenericRecyclerAdapter<SaveModel>(item){
+class SaveRecyclerAdapter(item: ArrayList<SaveModel>,listener: SaveListener): GenericRecyclerAdapter<SaveModel>(item){
     private var listener: SaveListener
     private lateinit var layout: LinearLayout
 

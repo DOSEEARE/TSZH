@@ -1,4 +1,4 @@
-package com.example.tsj.adapters.News
+package com.example.tsj.adapters.news
 
 import android.view.View
 import android.widget.TextView
