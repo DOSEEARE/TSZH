@@ -95,6 +95,7 @@ class HistoryListFragment : Fragment() {
                 } catch (e: Exception) {
                     println()
                 }
+                //
             }
         }
 
