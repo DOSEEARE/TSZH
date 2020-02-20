@@ -67,12 +67,14 @@ class AccountFragment : Fragment() {
 
     private fun getAlert() {
         val builder = AlertDialog.Builder(context)
-        builder.setTitle("Важное сообщение!")
-            .setMessage("Покормите кота!")
-            .setPositiveButton("ОК, иду на кухню") { dialog, id ->
+        builder.setMessage("Вы действительно хотите удалить\n" +
+                "Лицевой счет № 2425")
+            .setPositiveButton("Да, удалить") { dialog, id ->
                 dialog.cancel()
             }
-
+            .setNegativeButton("Отменить") { dialog, id ->
+                dialog.cancel()
+            }
         builder.create()
         builder.show()
     }
