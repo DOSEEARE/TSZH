@@ -71,12 +71,12 @@
                 android:layout_marginTop="4dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="46dp"
                     android:layout_height="wrap_content"
-                    android:text="Техобслуживание"
                     android:layout_weight="1"
-                    android:textSize="15sp"
-                    android:textColor="#3E3E3E"/>
+                    android:text="Техобслуживание"
+                    android:textColor="#3E3E3E"
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
