@@ -55,4 +55,5 @@ class HistoryFragment : Fragment() {
         (activity as AppCompatActivity).supportActionBar?.show()
         return root
     }
+    //
 }
