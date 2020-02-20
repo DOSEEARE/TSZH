@@ -34,7 +34,6 @@ class ContactFragment : Fragment() {
         }
 
         (activity as AppCompatActivity).supportActionBar?.hide()
-
         return root
     }
 }
