@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.tsj.R
@@ -31,6 +32,9 @@ class ContactFragment : Fragment() {
         imageBid.setOnClickListener {
             findNavController().navigate(R.id.navigation_bid)
         }
+
+        (activity as AppCompatActivity).supportActionBar?.hide()
+
         return root
     }
 }
